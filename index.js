@@ -25,7 +25,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-// app.use(cors)
+app.use(cors)
 app.use(express.static('build'))
 app.use(express.json())
 // Add headers before the routes are defined
