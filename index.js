@@ -8,7 +8,7 @@ const Cart = require('./model/cart')
 app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000','*');
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000', '*', 'https://my-custom-react-shoppingcart.herokuapp.com/');
 
 
     // Request methods you wish to allow
@@ -25,7 +25,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.use(cors)
+// app.use(cors)
 app.use(express.static('build'))
 app.use(express.json())
 // Add headers before the routes are defined
